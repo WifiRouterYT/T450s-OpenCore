@@ -86,3 +86,16 @@ Once you're up and running, you can follow these steps to get a better experienc
  - Move that downloaded file into that folder
  - You should now have a YogaSMCPane category at the bottom of System Preferences.
  - Additionally, you can get [YogaSMCNC](https://github.com/zhen-zen/YogaSMC/releases/latest) (Get YogaSMC-**App**-Release.**dmg**) to get statistics/fan control in one click in your top bar, as well as on-screen popups for when you change Keyboard Backlight, mute your microphone, toggle caps lock, etc. I recommend it!
+
+### 4. Getting rid of the USB Stick and moving the EFI to your computer's storage
+**ONLY DO THIS AFTER YOU ARE SURE EVERYTHING WORKS!!** Save yourself a heache and troubleshoot off a USB stick.
+
+ - Download [MountEFI](https://github.com/corpnewt/MountEFI) and follow it's installation instructions
+ - Run MountEFI, and press "b" then Enter to mount the boot drive's EFI partition.
+ - **If it says "There is no EFI partition associated with [disk]", follow these steps:**
+  - (to write! use gparted or something to create a new 250ish MB partition called "EFI" and formatted as "FAT32")
+  - Restart this section to mount the partition.
+ - It will mount your EFI partition as a volume you can access from Finder.
+ - Make sure you have Verbose mode, all of the debugging stuff, and ShowPicker is disabled (not required but *highly* recommended to make your experience booting up smoother)
+ - Simply drag and drop the "EFI" folder (NOT it's contents, the folder itself.) from your USB stick to that mounted EFI partition.
+ - Eject your USB stick, remove it, and reboot! If it boots into MacOS without your USB stick, you're all done!
