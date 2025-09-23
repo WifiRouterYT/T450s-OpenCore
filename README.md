@@ -1,6 +1,6 @@
 # OpenCore Hackintosh EFI Files for Thinkpad T450s
 These are OpenCore 0.8.8 EFI files to get Mac OS running on a Thinkpad T450s. A regular Thinkpad T450 may work as well, but I do not have a machine to test.
-Keep in mind these are the bare minimum to install and have a somewhat using system. I have not done extensive testing and not everything may work.
+Keep in mind these are the bare minimum to install and have a somewhat using system. I have not done extensive testing and not everything may work. **Yes, it will be a bit sluggish. This is old hardware.**
 
 ## Requirements:
  - A functioning frontal lobe
@@ -18,7 +18,7 @@ Keep in mind these are the bare minimum to install and have a somewhat using sys
     - `CSM Support`: **Yes**.
 
 ## Tested Hardware
- - CPU: `i5-3600U @ 2.60 GHz`
+ - CPU: `i5-5300U @ 2.60 GHz`
  - GPU: `Intel HD Graphics 5500`
  - LAN: `Intel I218-LM Ethernet Controller`
  - WAN: `Intel Wireless 7265`
