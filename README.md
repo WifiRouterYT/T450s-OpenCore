@@ -1,5 +1,5 @@
 # OpenCore Hackintosh EFI Files for Thinkpad T450s
-These are OpenCore 0.8.8 EFI files to get Mac OS running on a Thinkpad T450s. A regular Thinkpad T450 may work as well, but I do not have a machine to test.
+These are OpenCore 1.0.5 EFI files to get Mac OS running on a Thinkpad T450s. A regular Thinkpad T450 may work as well, but I do not have a machine to test.
 Keep in mind these are the bare minimum to install and have a somewhat using system. I have not done extensive testing and not everything may work. **Yes, it will be a bit sluggish. This is old hardware.**
 
 <img width="1600" height="900" alt="t450s-monterey" src="https://github.com/user-attachments/assets/31dc1adf-294b-412e-b370-bb32306427ec" />
@@ -8,16 +8,16 @@ Keep in mind these are the bare minimum to install and have a somewhat using sys
  - A functioning frontal lobe
  - A basic understanding of OpenCore and Hackintoshing
  - The following BIOS settings set:
-    - `Security Chip`: **Disabled**;
-    - `Memory Protection -> Execution Prevention`: **Enabled**;
-    - `Intel Virtualization Technology`: **Enabled**;
-    - `Virtualization -> VT-Directed IO`: **Disabled**;
-    - `Bottom Cover Tamper Detection`: __MUST BE **Disabled**__;
-    - `Computrace`: **Disabled**;
-    - `Secure Boot`: **Disabled**;
-    - `UEFI/Legacy Boot`: **UEFI Only**;
-    - `Fingerprint Sensor`: **Disabled** (It prevents waking up from sleep for whatever reason.);
-    - `CSM Support`: **Yes**.
+    - `Security Chip`: **Disabled**
+    - `Memory Protection -> Execution Prevention`: **Enabled**
+    - `Intel Virtualization Technology`: **Enabled**
+    - `Virtualization -> VT-Directed IO`: **Disabled**
+    - `Bottom Cover Tamper Detection`: MUST BE **Disabled**
+    - `Computrace`: **Disabled**
+    - `Secure Boot`: **Disabled**
+    - `UEFI/Legacy Boot`: **UEFI Only**
+    - `Fingerprint Sensor`: **Disabled** (It prevents waking up from sleep for whatever reason.)
+    - `CSM Support`: **Yes**
 
 ## Tested Hardware
  - CPU: `i5-5300U @ 2.60 GHz`
@@ -30,7 +30,8 @@ Keep in mind these are the bare minimum to install and have a somewhat using sys
 These are MacOS versions that I have gotten to boot and to be usable, but that does not mean EVERYTHING works.
  - MacOS Monterey (12.7.4 and 12.7.6 tested)
 
-## What works
+## What works and what doesn't?
+### What works
  - Sleep (I cannot test waking because my machine has a BIOS password, so I cannot disable the problematic fingerprint sensor)
  - Intel Wifi
  - Ethernet
@@ -39,21 +40,23 @@ These are MacOS versions that I have gotten to boot and to be usable, but that d
  - Touchpad & Trackpoint
  - USB 2.0 / 3.0
  - Camera
+ - FileVault (disk encryption)
  - OS Keyboard Backlight Control - see Post Install section to add the System Preference Pane
  - Thinkpad Light Customization - see Post Install section to add the System Preference Pane
  - Battery Charging Limits (by battery included) - see Post Install section to add the System Preferences Pane
 
-## What doesn't
+### What doesn't
  - VGA
- - Anything EC Related, including some ThinkPad-specific controls (working on a fix!)
-
-## What I haven't tested
  - SD Card Reader
+ - Anything EC Related, including fan control (Need assistance with this!)
+
+### What I haven't tested
  - WWAN / 4G Modem
  - Mini DP
  - Apple Services (iMessage, Facetime, App Store, AirDrop, Continuity, etc.)
  - Broadcom network adapters (Should work, may need to disable Airport Kext)
  - Bluetooth (probably works)
+ - DRM
  - Lots of other stuff
 
 ## Getting started
