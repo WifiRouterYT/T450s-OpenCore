@@ -26,6 +26,7 @@ Keep in mind these are the bare minimum to install and have a somewhat using sys
  - WAN: `Intel Wireless 7265`
  - Audio: `Realtek ALC3232`
  - Dual Batteries
+
 Any configuration of the T450s not listed here I have not tested because I do not have that machine. If you have it, feel free to test it and let me know how it works!
 
 ## Supported MacOS Versions
