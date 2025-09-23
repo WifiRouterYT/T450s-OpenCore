@@ -93,8 +93,8 @@ Once you're up and running, you can follow these steps to get a better experienc
  - Download [MountEFI](https://github.com/corpnewt/MountEFI) and follow it's installation instructions
  - Run MountEFI, and press "b" then Enter to mount the boot drive's EFI partition.
  - **If it says "There is no EFI partition associated with [disk]", follow these steps:**
-  - (to write! use gparted or something to create a new 250ish MB partition called "EFI" and formatted as "FAT32")
-  - Restart this section to mount the partition.
+   - (to write! use gparted or something to create a new 250ish MB partition called "EFI" and formatted as "FAT32")
+   - Restart this section to mount the partition.
  - It will mount your EFI partition as a volume you can access from Finder.
  - Make sure you have Verbose mode, all of the debugging stuff, and ShowPicker is disabled (not required but *highly* recommended to make your experience booting up smoother)
  - Simply drag and drop the "EFI" folder (NOT it's contents, the folder itself.) from your USB stick to that mounted EFI partition.
