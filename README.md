@@ -43,6 +43,7 @@ These are MacOS versions that I have gotten to boot and to be usable, but that d
 
 ## What doesn't
  - VGA
+ - Anything EC Related, including some ThinkPad-specific controls (working on a fix!)
 
 ## What I haven't tested
  - SD Card Reader
