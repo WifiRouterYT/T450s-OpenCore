@@ -2,6 +2,8 @@
 These are OpenCore 0.8.8 EFI files to get Mac OS running on a Thinkpad T450s. A regular Thinkpad T450 may work as well, but I do not have a machine to test.
 Keep in mind these are the bare minimum to install and have a somewhat using system. I have not done extensive testing and not everything may work.
 
+<img width="1600" height="900" alt="t450s-monterey" src="https://github.com/user-attachments/assets/31dc1adf-294b-412e-b370-bb32306427ec" />
+
 ## Requirements:
  - A functioning frontal lobe
  - A basic understanding of OpenCore and Hackintoshing
