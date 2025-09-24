@@ -60,6 +60,7 @@ These are MacOS versions that I have gotten to boot and to be usable, but that d
  - Lots of other stuff
 
 ## Getting started
+### Setup your USB installer on Windows
 (todo!! seek out other resources for getting started, and then just copy the EFI folder once you have a MacOS image on your USB stick)
 
 ## Post-Install
@@ -91,11 +92,20 @@ Once you're up and running, you can follow these steps to get a better experienc
 **ONLY DO THIS AFTER YOU ARE SURE EVERYTHING WORKS!!** Save yourself a headache and troubleshoot off a USB stick.
 
  - Download [MountEFI](https://github.com/corpnewt/MountEFI) and follow it's installation instructions
- - Run MountEFI, and press "b" then Enter to mount the boot drive's EFI partition.
+ - Run MountEFI, and press "b" then Enter to mount the boot drive's EFI partition. It will mount your EFI partition as a volume you can access from Finder.
  - **If it says "There is no EFI partition associated with [disk]", follow these steps:**
-   - (to write! use gparted or something to create a new 150ish MB partition called "EFI" and formatted as "FAT32")
-   - Restart this section to mount the partition.
- - It will mount your EFI partition as a volume you can access from Finder.
+   - Open up Disk Utility and select your macOS drive on the left sidebar. Do not expand it.
+   - In the top right, you'll see an array of buttons for disk actions. Click the "Partition" button.
+   - Under the big Pie chart, click the "+" icon
+   - When prompted to add a volume to the APFS container or partition the disk, **click "Add Partition"** (Important!)
+   - The newly created partition will be already selected. Name it "EFI", and change the size to 200 MB. Use the dropdown next to the Size textbox to change the units to MB.
+   - **Do not change the format. Keep it at APFS.** Click Apply, then confirm by hitting "Partition"
+   - It will warn you that the computer may freeze while resizing the startup volume. Click Continue and let it work. This may take a few minutes.
+   - Once it's done, select your startup disk again (not any of the subitems) and click "Partition" again.
+   - Near the top of the drive, find the "EFI, 200 MB" slice and click on it. It will be highlighted blue.
+   - Change the "Format" to `MS-DOS (FAT)`, and click Apply. Confirm by clicking "Partition", and let it work. This will be quick.
+   - Do not re-run the MountEFI script, it will not work. Make sure the new "EFI" partition is mounted (open up Finder and see if it's in the sidebar)
+   - If it's mounted, continue with the steps below as normal. Otherwise, mount it in Disk Utility before proceeding.
  - Make sure you have Verbose mode, all of the debugging stuff, and ShowPicker is disabled (not required but *highly* recommended to make your experience booting up smoother)
  - Simply drag and drop the "EFI" folder (NOT it's contents, the folder itself.) from your USB stick to that mounted EFI partition.
  - Eject your USB stick, remove it, and reboot! If it boots into MacOS without your USB stick, you're all done!
